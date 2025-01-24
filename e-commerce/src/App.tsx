@@ -2,13 +2,17 @@ import { useState } from 'react'
 import './App.css'
 import ProductCard from './components/ProductCard';
 import Navigation from './components/Navigation';
+import Searchbar from './components/Searchbar';
+
 
 function App() {
   const [cart, setCart] = useState<number[]>([]);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const addToCart = (productId: number) => {
     setCart([...cart, productId])
   }
+
 
   const products = [
     {
