@@ -4,7 +4,7 @@ interface SearchProps {
     onSearch: (searchTerm: string) => void;
 }
 
-export default ({ onSearch}: SearchProps) => {
+export default ({onSearch}: SearchProps) => {
     const [query, setQuery] = useState("");
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
